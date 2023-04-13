@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %} 
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock head %}
+
+{% block content %}
+<main>
+    <div class="left-content">
+        <div class="profile card">
+            <div class="round-green">
+                <img src="{{ user.image.url }}" alt="Profile Picture">
+            </div>
+            <p id="username">{{ user.full_name }}</p>
+            <p id="role">{{ user.stack }}</p>
+        </div>
+        <div class="main-description card">
+            <div class="location flex">
+                <img src="{% static 'assets/map-pin.svg' %}" alt="">
+                <p>{{ user.country }}</p>
+            </div>
+            
+            {% if user.company %}
+            <div class="company flex">
+                <img src="{% static 'assets/briefcase.svg' %}" alt="">
+                <p><a href="{{ user.company_l }}" target="_blank">{{ user.company }}</a></p>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if user.github %}
+            <div class="github flex">
+                <img src="{% static 'assets/github1.svg' %}" alt="">
+                <p><a href="{{ user.github_l }}" target="_blank">{{ user.github }}</a></p>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if user.linkedin %}
+            <div class="linkedin flex">
+                <img src="{% static 'assets/linkedin.svg' %}" alt="">
+                <p><a href="{{ user.linkedin_l }}" target="_blank">{{ user.linkedin }}</a></p>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if user.twitter %}
+            <div class="twitter flex">
+                <img src="{% static 'assets/twitter.svg' %}" style="color:aqua" alt="">
+                <p><a href="{{ user.twitter_l }}" target="_blank">{{ user.twitter }}</a></p>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if user.webpage %}
+            <div class="website flex">
+                <img src="{% static 'assets/globe.svg' %}" alt="">
+                <p><a href="{{ user.webpage }}" target="_blank">{{ user.webpage }}</a></p>
+            </div>
+            {% else %}
+            {% endif %}
+
+            <div class="email flex">
+                <img src="{% static 'assets/mail.svg' %}" alt="">
+                <p>{{ user.user.email }}</p>
+            </div>
+        </div>
+        <div class="tech card">
+            <p class="main-title">Tecnologias</p>
+            <div class="flex-row">
+                {% for tech in user.techs %}
+                <p>{{ tech }}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="experience card">
+            <p class="main-title">Experiência</p>
+            {% if experiences %}
+            {% for exp in experiences %}
+            <ul>
+                <li>
+                    <p>{{ exp.company }}</p>
+                    <p>{{ exp.start }} - {{ exp.end }}</p>
+                    <p>{{ exp.work }}</p>
+                </li>
+            </ul>
+            {% endfor %}
+            {% else %}
+            {% endif %}
+        </div>
+        <div class="education card">
+            <p class="main-title">Educação</p>
+            {% if educations %}
+            {% for edu in educations %}
+            <ul>
+                <li>
+                    <p>{{ edu.school }}</p>
+                    <p>{{ edu.start }} - {{ edu.end }}</p>
+                    <p>{{ edu.title }}</p>
+                </li>
+            </ul>
+            {% endfor %}
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="right-content">
+        <div class="bar">
+            <p>My Projects</p>
+            <p>Veja Todos</p>
+        </div>
+        <div class="two-box">
+            <div class="boxs box">
+                <div class="box-header">
+                    <img class="icon" src="{% static 'assets/folder.svg' %}" alt="">
+                    <span>my-onix</span>
+                </div>
+                <p class="box-content">Consulte os códigos de erro que aparecem no painel do veículo Onix.</p>
+                <div class="box-footer">
+                    <div class="block-1">
+                        <div class="sub-block">
+                            <img class="icon" src="{% static 'assets/star.svg' %}" alt="star">
+                            <p>100</p>
+                        </div>
+                        <div class="sub-block">
+                            <img class="icon" src="{% static 'assets/git-branch.svg' %}" alt="git-branch">
+                            <p>100</p>
+                        </div>
+                    </div>
+                    <div class="sub-block">
+                        <img id="Ellipse" src="{% static 'assets/Ellipse2.png' %}" alt="">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+            </div>
+            <div class="boxs box">
+                <div class="box-header">
+                    <img class="icon" src="{% static 'assets/folder.svg' %}" alt="">
+                    <span>my-onix</span>
+                </div>
+                <p class="box-content">Consulte os códigos de erro que aparecem no painel do veículo Onix.</p>
+                <div class="box-footer">
+                    <div class="block-1">
+                        <div class="sub-block">
+                            <img class="icon" src="{% static 'assets/star.svg' %}" alt="star">
+                            <p>100</p>
+                        </div>
+                        <div class="sub-block">
+                            <img class="icon" src="{% static 'assets/git-branch.svg' %}" alt="git-branch">
+                            <p>100</p>
+                        </div>
+                    </div>
+                    <div class="sub-block">
+                        <img id="Ellipse" src="{% static 'assets/Ellipse 2.png' %}" alt="">
+                        <p>CSS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bar">
+            <p>Recent Posts</p>
+        </div>
+        <div class="lst-box">
+            <img src="{% static 'assets/photo.png' %}" alt="profile-photo">
+            <div class="lst-content">
+                <div class="lst-header">
+                    <h2>Erro adb devices no Genymotion e Android Studio (React Native)</h2>
+                    <p>2 anos atrás</p>
+                </div>
+                <p class="lst-content">
+                    Erro adb devices no Genymotion e Android Studio (React Native)
+                </p>
+                <div class="tags">
+                    <span>#react-native</span>
+                    <span>#genimotion</span>
+                    <span>#genimotion</span>
+                    <span>#genimotion</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}

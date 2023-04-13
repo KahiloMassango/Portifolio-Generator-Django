@@ -1,0 +1,224 @@
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+    --bg-shadow: #7a647a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: 0;
+    padding: 4rem;
+    background-color: var(--body-bg-color);
+
+}
+
+img {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #fff !important;
+}
+
+#main-container {
+    /* background-color: green; */
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background-color: var(--bg-cards);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-width: 50rem;
+    /* height: 40rem; */
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.login-box h1 {
+    margin-left: 1rem;
+    margin-bottom: 4rem;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--text-color);
+}
+
+.lb-in {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+    border-bottom: 0.2rem solid var(--bg-shadow);
+    transition: border-bottom 300ms;
+}
+
+.lb-in:hover {
+    border-bottom: 0.2rem solid var(--bg-techs);
+}
+
+
+.lb-in label {
+    font-size: 1.3rem;
+    padding-left: 3rem;
+}
+
+.lb-in input {
+    background: none;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 4rem;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+#forgotten-pass {
+    font-size: 1.4rem;
+    color: var(--bg-techs);
+}
+
+.btn-link {
+    margin-top: 1.7rem;
+    border-radius: 5rem;
+    width: 43%;
+    /* width: 15rem; */
+    height: 4rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--bg-techs);
+    color: var(--text-color);
+    transition: 300ms all ease-in-out;
+    font-weight: 700;
+
+}
+
+.btn-link:hover {
+    color: white;
+    outline: none;
+    background: var(--bg-techs);
+    cursor: pointer;
+}
+
+.register-link {
+    font-size: 1.4rem;
+}
+
+.register-link a {
+    padding-left: 0.5rem;
+    font-weight: 700;
+    color: var(--bg-techs);
+}
+
+.long-row p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--bg-techs);
+}
+
+.long-row p:before,
+.long-row p:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid var(--bg-shadow);
+    margin: auto 1rem;
+}
+
+.alt-logins {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.alt-logins a img {
+    width: 5rem;
+    height: 5rem;
+}
+
+@media only screen and (max-width:599px) {
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s;
+        -webkit-text-fill-color: #fff !important;
+    }
+
+    #main-container {
+        /* background-color: green; */
+        width: 80%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-box {
+        background-color: var(--bg-cards);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        min-width: 100%;
+        /* height: 40rem; */
+        padding: 2rem;
+        border-radius: 1.5rem;
+    }
+
+    .login-box h1 {
+        margin-left: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .lb-in input {
+        background: none;
+        font-size: 1.3rem;
+        width: 100%;
+        height: 4rem;
+        border: none;
+        outline: none;
+        color: var(--text-color);
+    }
+
+}

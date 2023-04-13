@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %} 
+<title>Register | Accounts</title>
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock head %}
+
+{% block content %}
+<div id="main-container">
+    <div class="login-box">
+        <h1>Create your NAMESITE Account</h1>
+        <form action="#" id="form">
+            <div class="lb-in">
+                <img src="{% static 'assets/user.svg' %}" alt="">
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class="lb-in">
+                <img src="{% static 'assets/mail.svg' %}" alt="">
+                <input type="email" class="input" name="email" placeholder="Email">
+            </div>
+            <div class="lb-in"> <img src="{% static 'assets/lock.svg'%}" alt="">
+                <input type="password" class="input" name="password" placeholder="Password">
+            </div>
+            <div class="lb-in"> <img src="{% static 'assets/lock.svg'%}" alt="">
+                <input type="password" name="password2" class="input" placeholder="Password Confirm">
+            </div>
+            <input type="submit" value="Create an account" class="btn-link" id="submit">
+        </form>
+        <p class="login-link">Already have an ccount?<a href="{% url 'accounts:login' %}">Sign in</a></p>
+    </div>
+</div>
+{% endblock content %}

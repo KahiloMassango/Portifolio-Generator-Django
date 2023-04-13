@@ -15,4 +15,4 @@ def home(request, slug):
         'experiences': experiences,
         'educations': educations
     }
-    return render(request, 'main.html', context)
+    return render(request, 'index.html', context)

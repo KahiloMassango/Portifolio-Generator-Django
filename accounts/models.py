@@ -53,19 +53,19 @@ class Profile(models.Model):
     image = models.ImageField(default='default.jpg', upload_to='profile_pics/%Y/%m/%d')  # noqa
     country = CountryField()
     stack = models.CharField(choices=stacks_choices, default="FR", max_length=200)  # noqa
-    company = models.CharField(max_length=200, default='default', blank=True,)
-    company_l = models.URLField(max_length=200, default='default.com', blank=True)  # noqa
+    company = models.CharField(max_length=200, blank=True,)
+    company_l = models.URLField(max_length=200, blank=True)  # noqa
     github = models.CharField(max_length=200, default='default')
-    github_l = models.URLField(max_length=200, default='default.com', blank=True)  # noqa
+    github_l = models.URLField(max_length=200, blank=True)  # noqa
     linkedin = models.CharField(max_length=200, default='default')
-    linkedin_l = models.URLField(max_length=200, default='default.com', blank=True)  # noqa
-    twitter = models.CharField(max_length=200, default='default', blank=True)
-    twitter_l = models.URLField(max_length=200, default='default.com', blank=True)  # noqa
+    linkedin_l = models.URLField(max_length=200, blank=True)  # noqa
+    twitter = models.CharField(max_length=200, blank=True)
+    twitter_l = models.URLField(max_length=200, blank=True)  # noqa
     webpage = models.URLField(max_length=200, blank=True, null=True)
     techs = MultiSelectField(choices=techs_choices, max_length=200)
 
     def __str__(self):
-        return f'{self.user.username}'
+        return f'{self.full_name}'
 
 
 class Experience(models.Model):

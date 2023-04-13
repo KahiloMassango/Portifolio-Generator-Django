@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block head %} 
-<title>Register | Accounts</title>
-<link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <title>Register | Accounts</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock head %}
 
 {% block content %}
@@ -27,7 +27,7 @@
             </div>
             <input type="submit" value="Create an account" class="btn-link" id="submit">
         </form>
-        <p class="login-link">Already have an ccount?<a href="{% url 'accounts:login' %}">Sign in</a></p>
+        <p class="login-link">Already have an ccount? <a href="{% url 'accounts:login' %}">Sign in</a></p>
     </div>
 </div>
 {% endblock content %}

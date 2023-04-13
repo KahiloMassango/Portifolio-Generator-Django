@@ -1,0 +1,3 @@
+[run]
+branch = True
+omit = venv/*,**/*test*.py,manage.py,accounts/migrations/*.py,portifolio/migrations/0*.py,core/*,**/admin.py,**/apps.py,**/__init__.py,*/tests/*,

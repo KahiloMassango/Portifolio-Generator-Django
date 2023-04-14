@@ -119,11 +119,10 @@ input:-webkit-autofill:active {
     color: var(--bg-techs);
 }
 
-.btn-link {
+#submit  {
     margin-top: 1.7rem;
     border-radius: 5rem;
     width: 43%;
-    /* width: 15rem; */
     height: 4rem;
     padding: 1rem;
     background: transparent;
@@ -131,7 +130,7 @@ input:-webkit-autofill:active {
     color: var(--text-color);
     transition: 300ms all ease-in-out;
     font-weight: 700;
-
+    align-self: center;
 }
 
 .btn-link:hover {

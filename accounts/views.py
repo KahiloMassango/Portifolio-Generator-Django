@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from .forms import LoginForm
 
 
 def custom_login(request):
-    return render(request, 'login.html')
+    form = LoginForm
+
+    return render(request, 'login.html', {'form': form})
 
 
 def register(request):
